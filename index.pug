@@ -6,13 +6,16 @@ mixin CreateBox(title, content, buttom, imgName)
             a(href="#")=buttom
         .picture
             img(src=imgName)
-            
+
 <!DOCTYPE html>
 html(lang="zh")
     head
         meta(charset="UTF-8")
         title DogLife.
+    main
+        link(rel="stylesheet", href="index.css")
     body
         include nav.pug
-    
-        +CreateBox("標題", "內容", "按鈕", "dog1.jpg")
+        +CreateBox("WE LOVE DOGS", "內容", "按鈕", "dog1.jpg")
+        +CreateBox("標題 2", "內容 2", "按鈕 2", "dog2.jpg")
+        +CreateBox("標題 3", "內容 3", "按鈕 3", "dog3.jpg")
