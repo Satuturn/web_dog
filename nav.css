@@ -17,7 +17,7 @@
     font-size: 40px;
 }
 .nav .logo .big {
-    font-weight: bold; 
+    font-weight: 900; 
 }
 .nav .logo .red, .nav ul li a.red {
     color: indianred;
@@ -26,4 +26,7 @@
     text-decoration: none;
     color: #757575;
     font-weight: 500;
+}
+.nav a:hover {
+    color: indianred;
 }
