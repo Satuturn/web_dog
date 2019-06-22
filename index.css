@@ -1,19 +1,17 @@
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .box {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 80px 0;
+    grid-gap: 10px 10px;
+    margin: 60px 0;
 }
 
 .box .picture img {
     width: 100%;
-}
-.box .content {
-    margin-top: 180px;
-    margin-left: 50px;
-}
-.box .content h1 {
-    font-size: 50px;
-    font-weight: 990;
 }
 
 .box .picture img[src="dog1.jpg"] {
@@ -23,26 +21,104 @@
     transform: rotate(10deg);
 }
 
-/* 調整文字大小 */
-body {
+.box .picture img[src="dog2.jpg"] {
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+    border: 18px solid white;
     width: 80%;
-    margin: 0 auto; 
-    font-size: 20px;
-}
-h1 {
-    font-size: 2em;
-}
-p {
-    font-size: 0.8em;
-}
-a {
-    font-size: 0.8em;
+    transform: rotate(-8deg);
+    margin-bottom: 150px;
 }
 
+.box .picture img[src="dog3.jpg"] {
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+    border: 18px solid white;
+    width: 70%;
+    transform: rotate(5deg);
+}
+
+.box .content {
+    margin-top: 180px;
+    margin-left: 50px;
+}
+.box .content h1 {
+    font-size: 50px;
+    font-weight: 990;
+}
+/* 標題 */
+.title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* 調整文字大小 */
+body {
+    font-size: 24px;
+}
+h1 {
+    font-size: 1.3em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1.1em;
+}
+p {
+    font-size: 0.7em;
+    padding: 30px 0;
+    color: #999
+}
+a {
+    font-size: 1em;
+    font-size: 0.8em;
+}
+ul {
+    font-size: 0.8em;
+}
 
 /* 價格區 */
 .priceBox {
-    background-color: #000;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.priceBox h2 {
+    margin: 30px 0;
+}
+.priceBox h3 {
+    margin: 20px 0;
+}
+.priceBox h3 span:nth-child(n+2) {
+    font-size: 20px;
+}
+.priceBox ul li {
+    margin: 10px 0;
+}
+.priceBox a {
+    margin: 10px 0;
+}
+.priceBox div{
+    background-color: rgb(150, 50, 50);
+    color: white;
+    text-align: center;
+    padding: 50px 30px;
+}
+.priceBox div ul {
+    list-style-image: url(check.png);
+    list-style-position: inside;
+    text-align: left;
+}
+.priceBox .premium {
+    background-color: #333;
+}
+.priceBox a {
+    background-color: #333;
+}
+.priceBox .premium a {
+    background-color: rgb(150, 50, 50);
+}
+.priceBox .basic ul li:nth-child(n+3), .priceBox .premium ul li:nth-child(n+5)  {
+    text-decoration: line-through;
+    color: #999;
 }
 
 /* footer */
@@ -67,9 +143,49 @@ a {
     border-radius: 60px; 
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.8em;
+}
+ul {
+    font-size: 0.8em;
 }
 
 .button:hover {
     background-color: #333;
 }
+
+/* 表單 */
+.gray {
+    background-color: #eee;
+}
+.contact {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.contact input {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.contact label {
+    display: block;
+    margin: 10px 0;
+}
+.contact textarea {
+    width: 100%;
+    border-radius: 10px;
+}
+.contact input[type="submit"] {
+    width: 120px;
+    padding: 0;
+    border-radius: 60px;
+    margin: 30px 0;
+}
+.contact .text {
+    padding: 0 30px;
+} 
+
+
+
+
