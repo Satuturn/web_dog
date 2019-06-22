@@ -7,6 +7,24 @@ mixin CreateBox(title, content, buttom, imgName)
         .picture
             img(src=imgName)
 
+mixin CreateTitle(title, content)
+    .title
+            h1=title
+            p=content
+
+mixin CreatePrice(className, count, title, price)
+    div(class=className)
+        - for (var i=1; i<= count; i++)
+            img(src="bone.png")
+        h2=title
+        h3=price
+        ul
+            li 寵物講座
+            li 飼料試吃包
+            li 寵物寫真
+            li 寵物旅館
+            li 寵物健康檢查
+
 <!DOCTYPE html>
 html(lang="zh")
     head
@@ -16,6 +34,33 @@ html(lang="zh")
         link(rel="stylesheet", href="index.css")
     body
         include nav.pug
-        +CreateBox("WE LOVE DOGS", "內容", "按鈕", "dog1.jpg")
-        +CreateBox("標題 2", "內容 2", "按鈕 2", "dog2.jpg")
-        +CreateBox("標題 3", "內容 3", "按鈕 3", "dog3.jpg")
+        +CreateBox("LOVELY DOGS", "我們是一群熱愛狗的人士，為了保護與關懷狗建立此網站。", "按鈕", "dog1.jpg")
+        +CreateTitle("Welcome LoveDogs", "在我們的網站內，您可以找到與寵物相關的資訊。")
+        +CreateBox("HAPPY LIFE!", "讓寵物擁有開心的生活空間與品質。", "按鈕 2", "dog2.jpg")
+        +CreateBox("PHOTOGRAPHY", "我們提供寵物寫真服務，幫寵物拍得美美的。", "按鈕 3", "dog3.jpg")
+        +CreateTitle("價格表", "我們提供三種的付費方案，您可以根據自己的需求選擇。")
+        .priceBox
+            +CreatePrice("basic", 1, "一般方案", "$250/年")
+            +CreatePrice("premium", 2, "進階方案", "$500/年")
+            +CreatePrice("pro", 3, "高階方案","$750/年")
+        +CreateTitle("聯絡我們", "如果有任何疑問歡迎來信諮詢。")
+        .contact
+            form
+                label(for="name") 姓名
+                input(type="text" id="name")
+                label(for="email") 電子信箱
+                input(type="email" id="email")
+                label(for="message") 請輸入內容
+                textarea(name="message" cols="30" rows="10")
+                input(type="submit" value="確認送出")
+            .text
+                h3 地址
+                p 404 台中市北區尊賢街7號
+                h3 電話
+                p 04 3504-0588
+                h3 電子信箱
+                p  appedu.com.tw    
+            
+        
+    
+    
