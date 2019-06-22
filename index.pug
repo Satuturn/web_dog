@@ -3,8 +3,8 @@ mixin CreateBox(title, content, buttom, imgName)
         .content
             h1=title
             p=content
-            a(href="#")=buttom
-        .picture
+            a(href="#" class="button")=buttom
+        .picture(class=pictureDir)
             img(src=imgName)
 
 mixin CreateTitle(title, content)
@@ -34,7 +34,7 @@ html(lang="zh")
         link(rel="stylesheet", href="index.css")
     body
         include nav.pug
-        +CreateBox("LOVELY DOGS", "我們是一群熱愛狗的人士，為了保護與關懷狗建立此網站。", "按鈕", "dog1.jpg")
+        +CreateBox("LOVELY DOGS", "我們是一群熱愛狗的人士，為了保護與關懷狗狗而建立這個網站。", "按鈕", "dog1.jpg")
         +CreateTitle("Welcome LoveDogs", "在我們的網站內，您可以找到與寵物相關的資訊。")
         +CreateBox("HAPPY LIFE!", "讓寵物擁有開心的生活空間與品質。", "按鈕 2", "dog2.jpg")
         +CreateBox("PHOTOGRAPHY", "我們提供寵物寫真服務，幫寵物拍得美美的。", "按鈕 3", "dog3.jpg")
@@ -61,18 +61,23 @@ html(lang="zh")
                 h3 電子信箱
                 p  appedu.com.tw    
         footer
-            .smallBox
-                h3 關於我們
-                p 愛毛小孩，毛小孩愛你
-            .smallBox
-                h3 快速連結
-                ul 
-                    li 首頁
-                    li 價格
-                    li 聯絡
-            .smallBox
-                h3 追蹤我們
-                p 歡迎來到我們的網站^_^   
+            .footerBox
+                .smallBox
+                    h3 關於我們
+                    p 愛毛小孩，毛小孩愛你
+                .smallBox
+                    h3 快速連結
+                    ul 
+                        li #[a(href="#") 首頁]
+                        li #[a(href="#") 價格]
+                        li #[a(href="#") 聯絡]
+                .smallBox
+                    h3 追蹤我們
+                    a(href="#") #[img(src="fb.png", alt="faebook")]
+                    a(href="#") #[img(src="ig.png", alt="instagram")]
+                    a(href="#") #[img(src="yt.png", alt="youtube")]
+            hr
+            .copyright Tutu &copy; 2019
 
             
         

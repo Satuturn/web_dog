@@ -3,10 +3,7 @@
     grid-template-columns: 50% 50%;
     margin: 80px 0;
 }
-body {
-    width: 80%;
-    margin: 0 auto; 
-}
+
 .box .picture img {
     width: 100%;
 }
@@ -24,4 +21,55 @@ body {
     border: 18px solid white;
     width: 70%;
     transform: rotate(10deg);
+}
+
+/* 調整文字大小 */
+body {
+    width: 80%;
+    margin: 0 auto; 
+    font-size: 20px;
+}
+h1 {
+    font-size: 2em;
+}
+p {
+    font-size: 0.8em;
+}
+a {
+    font-size: 0.8em;
+}
+
+
+/* 價格區 */
+.priceBox {
+    background-color: #000;
+}
+
+/* footer */
+.footerBox {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 50px 20px;
+}
+
+.smallBox img {
+    margin: 5px;
+}
+
+/* 按鈕 */
+.button {
+    display: inline-block;
+    background-color: indianred;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 60px; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #333;
 }
