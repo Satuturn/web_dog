@@ -24,7 +24,7 @@
 .box .picture img[src="dog2.jpg"] {
     box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
     border: 18px solid white;
-    width: 80%;
+    width: 100%;
     transform: rotate(-8deg);
     margin-bottom: 150px;
 }
@@ -32,7 +32,7 @@
 .box .picture img[src="dog3.jpg"] {
     box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
     border: 18px solid white;
-    width: 70%;
+    width: 100%;
     transform: rotate(5deg);
 }
 
@@ -120,12 +120,11 @@ ul {
     text-decoration: line-through;
     color: #999;
 }
-
-/* footer */
-.footerBox {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin: 50px 20px;
+.priceBox a:hover {
+    background-color: indianred;
+}
+.priceBox .premium a:hover {
+    background-color: indianred;
 }
 
 /* 按鈕 */
@@ -182,18 +181,18 @@ ul {
     padding: 0 30px;
 } 
 
-/* 頁尾 */
+/* 頁尾 footer */
 footer {
     background-color: indianred;
     color: white;
     height: 400px;
 }
-footer .footerBox {
+.footerBox {
     width: 80%;
     margin: 0 auto;
     padding: 50px 0;
     display: grid;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: auto auto auto;
 }
 footer .footerBox h3 {
     margin-top: 30px;
@@ -218,3 +217,46 @@ footer .copyright {
     text-align: center;
     padding-top: 50px;
 } 
+
+.box {
+
+}
+
+/* 手機 */
+@media screen and (max-width: 767px) {
+    .box {
+        grid-template-columns: 100%;
+        text-align: center;
+    } 
+    .box .picture img[src="dog1.jpg"], .picture img[src="dog2.jpg"], .picture img[src="dog3.jpg"] {
+        margin-top: 60px;
+        text-align: center;
+    }   
+    .priceBox {
+        grid-template-columns: auto;
+    }
+    .contact {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+    .footerBox {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+    footer{
+        height: 700px;
+    }
+}
+/* 平板*/
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .box {
+        grid-template-columns: 100%;
+        text-align: center;
+    } 
+    .box .picture img[src="dog1.jpg"], .picture img[src="dog2.jpg"], .picture img[src="dog3.jpg"] {
+        margin-top: 60px;
+    }
+    .priceBox {
+        grid-template-columns: auto auto;
+    }
+}
