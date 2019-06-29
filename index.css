@@ -218,10 +218,6 @@ footer .copyright {
     padding-top: 50px;
 } 
 
-.box {
-
-}
-
 /* 手機 */
 @media screen and (max-width: 767px) {
     .box {
@@ -258,5 +254,6 @@ footer .copyright {
     }
     .priceBox {
         grid-template-columns: auto auto;
+
     }
 }
